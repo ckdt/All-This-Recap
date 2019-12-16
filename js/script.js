@@ -1,28 +1,42 @@
 import {CountUp} from './countup.min.js';
 
+const images = [
+  'k1.jpg',
+  'k2.jpg',
+  'k0.jpg',
+  'k3.jpg',
+  'k4.jpg',
+  'k5.jpg',
+  'k6.jpg',
+  'k7.jpg',
+  'k8.jpg',
+  'k9.jpg',
+  'k10.jpg',
+  'k11.jpg',
+  'k12.jpg',
+  'k13.jpg',
+  'k14.jpg',
+  'k15.jpg',
+  'k16.jpg',
+  'k17.jpg',
+  'k18.jpg',
+  'k19.jpg',
+  'k20.jpg',
+  'k21.jpg',
+  'k22.jpg',
+  'k23.jpg',
+  'k24.jpg',
+  'k25.jpg',
+  'k26.jpg',
+  'k27.jpg',
+  'k28.jpg'
+];
+
 new fullpage('#fullpage', {
   licenseKey: 'D62A0CA5-A6F748B1-AADF056F-D8133285',
   navigation: true,
-  sectionsColor: [
-    '#29313E',
-    '#DAE1D9',
-    '#010fff',
-    '#506171',
-    '#FAF3ED',
-    '#29313E',
-    '#DAE1D9',
-    '#ff00ff'
-  ],
-  anchors: [
-    'intro',
-    'summary',
-    'industries',
-    'locations',
-    'projects',
-    'testimonials',
-    'time',
-    'tmp'
-  ],
+  sectionsColor: ['#29313E', '#DAE1D9', '#010fff', '#506171', '#FAF3ED', '#29313E', '#DAE1D9'],
+  anchors: ['intro', 'summary', 'industries', 'locations', 'projects', 'testimonials', 'time'],
   afterRender: function() {
     animateElement('.js-animate-start', 'bounce');
   },
@@ -37,15 +51,14 @@ new fullpage('#fullpage', {
     /* slide 3 */
     if (origin.index == 1 && section.index == 2) {
       console.log('Slide 3');
-
       document.querySelectorAll('.js-animate-li').forEach(el => {
         animateElement(el, 'fadeInLeft');
-        console.log(`Element ${el.tagName} with ID #${el.id} says: ${el.textContent}`);
       });
     }
     /* slide 4 */
     if (origin.index == 2 && section.index == 3) {
       console.log('Slide 4');
+      locationsPics();
     }
     /* slide 5 */
     if (origin.index == 3 && section.index == 4) {
@@ -54,9 +67,15 @@ new fullpage('#fullpage', {
     /* slide 6 */
     if (origin.index == 4 && section.index == 5) {
       console.log('Slide 6');
+
+      animateElement('.js-animate-quote', 'flash');
     }
     /* slide 7 */
     if (origin.index == 5 && section.index == 6) {
+      document.querySelectorAll('.section--services .bar').forEach(el => {
+        animateElement(el, 'fadeInUpBig');
+      });
+
       console.log('Slide 7');
     }
     /* slide 8 */
@@ -110,6 +129,39 @@ function countProjects() {
     this
   );
 }
+
+function locationsPics() {}
+
+let i = 0;
+const canvas = document.querySelector('.js-clickgrid');
+
+function placeImage(x, y) {
+  const nextImage = images[i];
+  const img = document.createElement('img');
+  img.setAttribute('src', 'img/keulen/' + nextImage);
+  img.setAttribute('class', 'js-img');
+  img.style.left = x + 'px';
+  img.style.top = y + 'px';
+  img.style.transform =
+    'translate(-50%, -50%) scale(0.5) rotate(' + (Math.random() * 20 - 10) + 'deg)';
+
+  canvas.appendChild(img);
+
+  i++;
+  if (i >= images.length) {
+    i = 0;
+  }
+}
+
+canvas.addEventListener('click', function(e) {
+  e.preventDefault();
+  placeImage(e.pageX, e.pageY);
+});
+
+canvas.addEventListener('touchend', function(e) {
+  e.preventDefault();
+  placeImage(e.pageX, e.pageY);
+});
 
 /* 
 COLORS

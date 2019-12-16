@@ -160,6 +160,7 @@ select {
 
   --base-size: 16px;
   --duration: 90s;
+  --var-padding: calc(2*var(--base-size));
 }
 
 html,
@@ -177,7 +178,8 @@ body {
 
 /* Sections */
 .section {
-  padding: calc(2*var(--base-size));
+  padding: var(--var-padding) var(--var-padding) 0 var(--var-padding);
+  overflow: hidden;
 }
 
 /* Intro */
@@ -273,23 +275,84 @@ body {
 
 .industries--list {
   list-style-type: decimal-leading-zero;
-  background: #red;
   padding-left: 6.5em;
   font-variant-numeric: tabular-nums;
 }
 
-
-
-.section--four {}
-
-.section--five {}
-
-.section--five h2 {
-  margin-bottom: 1em;
+/* Locations */
+.section--locations {
+  overflow: hidden;
 }
+
+.section--locations .section--header h2 {
+  position: relative;
+  z-index: 6;
+  color: var(--color-black);
+  text-align: center;
+  font-weight: 300 !important;
+}
+
+.js-clickgrid {
+  display: block !important;
+  overflow: hidden;
+  height: 100%;
+  border: 1px dotted var(--color-black);
+}
+
+.section--body .notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section--body .location--one {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+}
+
+.section--body .location--two {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+}
+
+.section--body .location--three {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(0%, -50%);
+  z-index: 10;
+}
+
+
+.js-img {
+  display: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  animation: fadein 0.3s;
+}
+
+.js-img:hover {
+  z-index: 8;
+}
+
+/* Projects */
+.section--projects {}
 
 .section--six {}
 
+/* Testimonials */
+.section--testimonials {
+  color: var(--color-offwhite);
+}
 
 
 /* grid */
@@ -376,7 +439,7 @@ body {
 }
 
 .bar {
-  background: #black;
+  background: black;
   /* fallback */
   background:
     linear-gradient(220deg, transparent 20px, black 0) top right;
@@ -704,5 +767,16 @@ ANIMATIONS
   100% {
     -webkit-transform: translateY(calc(100vh - 200px));
     transform: translateY(calc(100vh - 200px));
+  }
+}
+
+/* js-img fade animation */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
