@@ -1,6 +1,8 @@
 /* Modules */
 import {CountUp} from './countup.min.js';
+import {AnimateElement} from './animation.js';
 
+/* Fullpage JS */
 new fullpage('#app', {
   menu: '#menu',
   lockAnchors: false,
@@ -8,10 +10,10 @@ new fullpage('#app', {
     'intro',
     'summary',
     'industries',
+    'time',
     'locations',
     'projects',
     'quote',
-    'time',
     'clients',
     'thanks',
     'outro'
@@ -22,10 +24,10 @@ new fullpage('#app', {
     'intro',
     'summary',
     'industries',
+    'time',
     'locations',
     'projects',
     'quote',
-    'time',
     'clients',
     'thanks',
     'outro'
@@ -104,44 +106,40 @@ new fullpage('#app', {
   //events
   onLeave: function(origin, destination, direction) {
     if (destination.index == 0) {
-      console.log('intro');
+      onEnterIntro();
     }
     if (destination.index == 1) {
-      console.log('summary');
-      countProjects();
+      onEnterSummary();
     }
     if (destination.index == 2) {
-      console.log('industries');
-      animateIndustries();
+      onEnterIndustries();
     }
     if (destination.index == 3) {
-      console.log('locations');
+      onEnterTime();
     }
     if (destination.index == 4) {
-      console.log('projects');
+      onEnterLocations();
     }
     if (destination.index == 5) {
-      console.log('quote');
-      animateQuote();
+      onEnterProjects();
     }
     if (destination.index == 6) {
-      console.log('time');
-      animateGraph();
+      onEnterQuote();
     }
     if (destination.index == 7) {
-      console.log('clients');
+      onEnterClients();
     }
     if (destination.index == 8) {
-      console.log('thanks');
+      onEnterThanks();
     }
     if (destination.index == 9) {
-      console.log('outro');
+      onEnterOutro();
     }
     resetDefaults();
     console.log(origin.index, destination.index, direction);
   },
   afterLoad: function(origin, destination, direction) {
-    fitMarquee();
+    onLoadStage();
   },
   afterRender: function() {},
   afterResize: function(width, height) {},
@@ -151,7 +149,67 @@ new fullpage('#app', {
   onSlideLeave: function(section, origin, destination, direction) {}
 });
 
-function countProjects() {
+
+/* Custom onEnterFunctions */
+function onLoadStage(){
+  console.log('init');
+  // resize marque tag
+  fitMarquee();
+}
+function onEnterIntro(){
+  console.log('intro');
+}
+function onEnterSummary(){
+  console.log('summary');
+  // start Counter
+  startCounter();
+}
+function onEnterIndustries(){
+  console.log('industries');
+  // Animate listitems
+  const listItems = document.querySelectorAll('.section--industries .js-animate-li');
+  listItems.forEach(el => {
+    AnimateElement(el, ['fadeInLeft']);
+  });
+}
+function onEnterTime(){
+  console.log('time');
+  const graphItems = document.querySelectorAll('.section--time .bar');
+  graphItems.forEach(el => {
+    AnimateElement(el, ['fadeInUpBig']);
+  });
+}
+function onEnterLocations(){
+  console.log('locations');
+  AnimateElement('.location--rotterdam',['whobble','infinite']);
+}
+function onEnterProjects(){
+  console.log('projects');
+}
+function onEnterQuote(){
+  console.log('quote');
+  // Animate quote
+  AnimateElement('.js-animate-quote', ['flash']);
+}
+function onEnterClients(){
+  console.log('clients');
+}
+function onEnterThanks(){
+  console.log('thanks');
+}
+function onEnterOutro(){
+  console.log('outro');
+}
+
+
+/* Util functions */
+function fitMarquee() {
+  const marquee = document.querySelector('.section--marquee');
+  const single = document.querySelector('.marquee--line__one');
+  marquee.style.width = single.offsetWidth + 'px';
+}
+
+function startCounter(){
   var countID = setInterval(
     function(e) {
       const counter = document.querySelector('.js-animate-counter');
@@ -162,7 +220,7 @@ function countProjects() {
       };
       let display = new CountUp(counter, 28, options);
       if (!display.error) {
-        display.start(counterDoneAnimation);
+        display.start(onCounterEnd);
       } else {
         console.error(display.error);
       }
@@ -173,61 +231,17 @@ function countProjects() {
   );
 }
 
-function counterDoneAnimation() {
-  animateElement('.js-animate-counter', ['bounce', 'filled']);
-  const pyro = document.querySelector('.js-pyro');
-  pyro.classList.add('pyro');
-}
-
-function animateIndustries() {
-  document.querySelectorAll('.section--industries .js-animate-li').forEach(el => {
-    animateElement(el, ['fadeInLeft']);
-  });
-}
-
-function animateQuote() {
-  animateElement('.js-animate-quote', ['flash']);
-}
-
-function animateGraph() {
-  document.querySelectorAll('.section--time .bar').forEach(el => {
-    animateElement(el, ['fadeInUpBig']);
-  });
-}
-
-function resetDefaults() {
-  resetCount();
-}
-
-function resetCount() {
+function resetCounter(){
   const counter = document.querySelector('.js-animate-counter');
   counter.innerHTML = '0';
   counter.classList.remove('filled', 'bounce', 'animated');
-  const pyro = document.querySelector('.js-pyro');
-  pyro.classList.remove('pyro');
 }
 
-function animateElement(element, method, callback) {
-  console.log('animate', element, 'method', method, 'when done do:', callback);
-  var node = element;
-  if (typeof element === 'string') {
-    node = document.querySelector(element);
-  }
-  node.classList.add('animated', ...method);
-  function handleAnimationEnd() {
-    node.classList.remove('animated', method);
-    node.removeEventListener('animationed', handleAnimationEnd);
-
-    if (typeof callback === 'function') callback();
-  }
-  node.addEventListener('animationend', handleAnimationEnd);
+function onCounterEnd(){
+  AnimateElement('.js-animate-counter', ['bounce', 'filled']);
 }
 
-animateElement('.section--intro .js-animate', ['bounce']);
-
-function fitMarquee() {
-  const marquee = document.querySelector('.section--marquee');
-  const single = document.querySelector('.marquee--line__one');
-  marquee.style.width = single.offsetWidth + 'px';
-  console.log(marquee, single, marquee.style.width, single.offsetWidth);
+/* Reset Stage */
+function resetDefaults() {
+  resetCounter();
 }

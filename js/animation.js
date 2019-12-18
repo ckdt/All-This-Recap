@@ -1,4 +1,4 @@
-function animateElement(element, method, callback) {
+var AnimateElement = function(element, method, callback) {
   console.log('animate', element, 'method', method, 'when done do:', callback);
   var node = element;
   if (typeof element === 'string') {
@@ -13,5 +13,4 @@ function animateElement(element, method, callback) {
   }
   node.addEventListener('animationend', handleAnimationEnd);
 }
-
-animateElement('.section--intro .js-animate', ['bounce']);
+export {AnimateElement};
