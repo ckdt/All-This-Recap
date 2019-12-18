@@ -73,15 +73,15 @@ new fullpage('#app', {
   verticalCentered: false,
   sectionsColor: [
     '#010fff',
-    '#fff010',
-    '#009669',
-    '#fff',
     '#010fff',
     '#fff010',
-    '#009669',
-    '#222',
-    '#fff',
-    '#010fff'
+    '#fff010',
+    '#ffffff',
+    '#010fff',
+    '#ffffff',
+    '#010fff',
+    '#ffffff',
+    '#ffffff'
   ],
   paddingTop: '0',
   paddingBottom: '0',
