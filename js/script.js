@@ -138,7 +138,7 @@ const canvas = document.querySelector('.js-clickgrid');
 function placeImage(x, y) {
   const nextImage = images[i];
   const img = document.createElement('img');
-  img.setAttribute('src', 'img/keulen/' + nextImage);
+  img.setAttribute('src', 'img/location/' + nextImage);
   img.setAttribute('class', 'js-img');
   img.style.left = x + 'px';
   img.style.top = y + 'px';

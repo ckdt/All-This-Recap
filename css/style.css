@@ -451,6 +451,7 @@ body {
   padding: 0 30px 0 0;
 }
 
+/*
 .bar .inner {
   background: #2D5346;
   width: 100%;
@@ -487,7 +488,7 @@ body {
 
 .bar--five {
   height: 20vh;
-}
+}*/
 
 /* Font Sizing */
 p {
@@ -563,10 +564,6 @@ p {
 
 @media (min-width: 768px) {
   :root {
-    --color-black: #1e1e1e;
-    --color-red: #fa4616;
-    --color-yellow: #f6e203;
-    --color-white: #ffffff;
     --base-amount: calc(100vw / 12);
     /* 960 / 12 = 80px */
     --base-size: calc(var(--base-amount) / 5);
@@ -576,7 +573,6 @@ p {
   html,
   body {
     font-size: var(--base-size);
-    background: var(--color-black);
   }
 
   .headings .XXL:hover,
@@ -780,3 +776,28 @@ ANIMATIONS
     opacity: 1;
   }
 }
+
+/* 
+.marquee {
+  width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 50s linear infinite;
+  background:red;
+}
+
+.marquee:hover {
+  animation-play-state: paused
+}
+
+@keyframes marquee {
+  0% {
+    text-indent: 30em
+  }
+
+  100% {
+    text-indent: -105em
+  }
+} */
