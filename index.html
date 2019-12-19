@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="css/fullpage.min.css" />
   <link rel="stylesheet" href="css/animate.min.css" />
-  <link rel="stylesheet" href="css/cardstack.css" />
+  <link rel="stylesheet" href="css/tinder.css" />
   <link rel="stylesheet" href="css/app.css" />
 </head>
 
@@ -21,8 +21,16 @@
   <div id="app" class="app">
     <!-- intro -->
     <div class="section section--intro">
-      <header class="section--header">
-        <h2 class="section--title js-animate">ALL THIS &mdash; Year in review 2019</h2>
+      <header class="section--header section--header__centered">
+        <h3 class="section--title text--cylce__sentence">2019 was
+          <div class="text--cylce__words text--cylce__vertical">
+            <span>a very good year.</span>
+            <span>amazing.</span>
+            <span>beautiful.</span>
+            <span>delightful.</span>
+            <span>emotional.</span>
+          </div>
+        </h3>
       </header>
       <section class="section--body section--body__fc">
         <div class="section--marquee ">
@@ -35,41 +43,35 @@
         </div>
         <canvas id="drawingboard" class="js-drawcanvas"></canvas>
       </section>
-      <footer class="section--footer section--footer__lr">
-
-        <p>Scroll down or use &downarrow; &uparrow; to continue
-        </p>
-        <p><span class="hint">Hint: Click to change brush</span></p>
-        <p> <a href="#" class="js-reset">Reset canvas</a>
-        </p>
+      <footer class="section--footer section--footer__centered">
+        <p class="mono uppercase">click, scroll or use <span class="numpad">&downarrow;</span> <span
+            class="numpad">&uparrow;</span> <a href="#" class="dotlink js-reset">Clear canvas</a></p>
     </div>
     <!-- summary -->
     <div class="section section--summary">
       <section class="section--body section--body__fc">
-
-        <div class="js-pyro">
-          <div class="before"></div>
-          <div class="after"></div>
-        </div>
+        <div>
         <h2 class="body--title XXL js-animate">
-          In 2019 we worked on <br><span class="counter js-animate-counter">0</span> projects.
+          In 2019 we worked<br>
+          on <span class="counter js-animate-counter">0</span> projects.
         </h2>
-
+        <p>Got a project? <a href="https://allthis.digital/contact" class="dotlink contact">Let us know.</a></p>
+      </div>
       </section>
     </div>
     <!-- industries -->
     <div class="section section--industries">
       <header class="section--header">
-        <h2 class="section--title section--title__pd">Top five industries</h2>
+        <h2 class="section--title section--title__pd XXL">Top <span class="under">five</span> industries</h2>
       </header>
       <section class="section--body">
         <div class="industries">
           <ol class="industries--list">
-            <li class="industries--list--item js-animate-li ani-d4 XL">FinTech</li>
-            <li class="industries--list--item js-animate-li ani-d3 XL">LegalTech</li>
-            <li class="industries--list--item js-animate-li ani-d2 XL">Insurance</li>
-            <li class="industries--list--item js-animate-li ani-d1 XL">Retail</li>
-            <li class="industries--list--item js-animate-li XL">B-Corp</li>
+            <li class="industries--list--item js-animate-li ani-d4 L">FinTech</li>
+            <li class="industries--list--item js-animate-li ani-d3 L">LegalTech</li>
+            <li class="industries--list--item js-animate-li ani-d2 L">Insurance</li>
+            <li class="industries--list--item js-animate-li ani-d1 L">Retail</li>
+            <li class="industries--list--item js-animate-li L">B-Corp</li>
           </ol>
         </div>
       </section>
@@ -81,7 +83,7 @@
     <!-- time -->
     <div class="section section--time">
       <header class="section--header">
-        <h2 class="section--title">Time well spent</h2>
+        <h2 class="section--title XXL">Time spent</h2>
       </header>
       <section class="section--body">
         <div class="graph">
@@ -99,7 +101,6 @@
             <div class="inner">
               <p>UX design</p>
             </div>
-
           </div>
           <div class="bar bar--four ani-d3">
             <div class="inner">
@@ -114,14 +115,15 @@
         </div>
       </section>
       <footer class="section--footer section--footer__bar">
-        <p>* Design is how it works, part of it is what it looks like</p>
+        <p></p>
       </footer>
     </div>
 
     <!-- locations -->
     <div class="section section--locations">
       <header class="section--header">
-        <h2 class="section--title M">Top three locations</h2>
+        <h2 class="section--title section--title__pd XXL">Top <span class="under">three</span> locations</h2>
+        <p>Click to show 📷 pictures </p>
       </header>
       <div class="js-drawcanvas"></div>
       <section class="section--body">
@@ -146,10 +148,7 @@
           </div>
         </div>
       </section>
-      <footer class="section--footer section--footer__lr">
-        <p>Scroll down or use &downarrow; &uparrow; to continue
-        </p>
-        <p><span class="hint hint--dark">Hint: Click to draw pictures</span></p>
+      <footer class="section--footer section--footer__centered">
         <p><a href="#" class="js-reset">Reset canvas</a></p>
       </footer>
     </div>
@@ -160,103 +159,61 @@
       </header>
       <section class="section--body">
 
-        <div card-stack>
+        <div class="tinder">
+          <div class="tinder--status">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+        
+          <div class="tinder--cards">
+            <div class="tinder--card tinder--card__black">
+              <img src="https://placeimg.com/600/300/people">
+              <h3>Universiteit van Amsterdam</h3>
+              <h4>Six times easier to find your way.</h4>
+              <p class="bg--red">We improved the navigation concept for the university website and subsites. Replacing the mega-menu with in-page navigation and a hybrid sidebar.</p>
+            </div>
+            <div class="tinder--card tinder--card__orange">
+              <img src="https://placeimg.com/600/300/animals">
+              <h3>Basic-Fit</h3>
+              <h4>No need to call customer services.</h4>
+              <p>With the improved MY Basic-Fit platform it is now easier than ever to get answers on your daily questions like “when does my gym close”.</p>
+            </div>
+            <div class="tinder--card tinder--card__green">
+              <img src="https://placeimg.com/600/300/nature">
+              <h3>ABN AMRO</h3>
+              <h4>Financial stories, for humans.</h4>
+              <p>We helped ABN AMRO to make their complex financial stories on abnamro.com more visually appealing and easier to understand by adding reusable components to improve consistency.</p>
+            </div>
+            <div class="tinder--card tinder--card__yellow">
+              <img src="https://placeimg.com/600/300/tech">
+              <h3>Secrid</h3>
+              <h4>Supply chain as a well oiled machine.</h4>
+              <p>Together with all the partners in the supply-chain of Secrid we co-created a custom ...</p>
+            </div>
+            <div class="tinder--card tinder--card__blue">
+              <img src="https://placeimg.com/600/300/arch">
+              <h3>Justix</h3>
+              <h4>The future of legal services.</h4>
+              <p>We helped Justix prototype, design & test the future of digital legal services.</p>
+            </div>
 
-          <input id="card-0" name="card-set" type="radio" checked />
-          <div card>
-            <div class="card--wrapper">
-              <div class="image">
-                <img class="visual" src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" />
-              </div>
-              <div class="content">
-                <h2>Universiteit van Amsterdam</h2>
-                <h3 class="S">Six times easier to find your way.</h3>
-                <p> We improved the navigation concept for the university website and subsites. Replacing
-                  the mega-menu with in-page navigation and a hybrid sidebar.</p>
-                <label for="card-1">Next project</label>
-              </div>
+            <div class="tinder--endscreen">
+              <h2>Your project here?</h2>
+              <h3>We are open for business in 2020</h3>
+              <p><a href="#">Contact us</a></p>
             </div>
           </div>
-
-          <input id="card-1" name="card-set" type="radio" />
-          <div card>
-            <div class="card--wrapper">
-              <div class="image">
-                <img class="visual" src="https://media.giphy.com/media/gjgZRELnGRcnaklgmj/giphy.gif" />
-              </div>
-              <div class="content">
-                <h2>Basic-Fit</h2>
-                <h3 class="M">No need to call customer services</h3>
-                <p> With the improved MY Basic-Fit platform it is now easier than ever to get answers on
-                  your daily questions like “when does my gym close”.</p>
-                <label for="card-2">Next project</label>
-              </div>
-            </div>
-          </div>
-
-          <input id="card-2" name="card-set" type="radio" />
-          <div card>
-            <div class="card--wrapper">
-              <div class="image">
-                <img class="visual" src="https://media.giphy.com/media/i3ofoM2UDb20yajckT/giphy.gif" />
-              </div>
-              <div class="content">
-                <h2>ABN AMRO</h2>
-                <h3 class="M">Financial stories, for humans</h3>
-                <p> We helped ABN AMRO to make their complex financial stories on abnamro.com more visually appealing
-                  and
-                  easier to understand by adding reusable components to improve consitency.</p>
-                <label for="card-3">Next project</label>
-              </div>
-            </div>
-          </div>
-
-          <input id="card-3" name="card-set" type="radio" />
-          <div card>
-            <div class="card--wrapper">
-              <div class="image">
-                <img class="visual" src="https://media.giphy.com/media/lSIf3IZMJRCTBIFS2a/giphy.gif" />
-              </div>
-              <div class="content">
-                <h2>Secrid</h2>
-                <h3 class="M">Supply chain as a well oiled machine</h3>
-                <p> Together with all the partners in the supplychain of secrid we co-created a custom ...
-                </p>
-                <label for="card-4">Next project</label>
-              </div>
-            </div>
-          </div>
-
-          <input id="card-4" name="card-set" type="radio" />
-          <div card>
-            <div class="card--wrapper">
-              <div class="image">
-                <img class="visual" src="https://media.giphy.com/media/RKZAc8sP1WbG1pw0nV/giphy.gif" />
-              </div>
-              <div class="content">
-                <h2>Justix</h2>
-                <h3 class="M">the future of legal services</h3>
-                <p> We helped justix prototype, design & test the future of digital legal services.
-                </p>
-                <label for="card-5">Done</label>
-              </div>
-            </div>
-          </div>
-         
-          <input id="card-5" name="card-set" type="radio" />
-          <div card>
-            <div class="content">
-              <h2>CTA</h2>
-              <a href="#">Contact us</a>
-              <label for="card-0">Restart</label>
-            </div>
+          
+          <div class="tinder--buttons">
+            <button id="nope"><i class="fa fa-remove"></i></button>
+            <button id="love"><i class="fa fa-heart"></i></button>
           </div>
         </div>
 
       </section>
       <footer class="section--footer">
-        <p>* a small glimpse because of all them NDA's.</p>
       </footer>
+      
     </div>
     <!-- quote -->
     <div class="section section--quote">
@@ -285,7 +242,7 @@
           <div class="grid--col grid--col__two"><img src="img/logos/basicfit.svg" width="120"></div>
           <div class="grid--col grid--col__three"><img src="img/logos/secrid.svg" width="120"></div>
           <div class="grid--col grid--col__four"><img src="img/logos/uva-small.svg" width="80"></div>
-         <div class="grid--col grid--col__five"><img src="img/logos/justix.svg" width="160"></div>
+          <div class="grid--col grid--col__five"><img src="img/logos/justix.svg" width="160"></div>
           <div class="grid--col grid--col__six"><img src="img/logos/nn.svg" width="180"></div>
         </div>
       </section>
@@ -328,10 +285,16 @@
       </footer>
     </div>
   </div>
+
+
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
+
   <script src="js/countup.min.js" type="module"></script>
   <script src="js/location.js" type="module"></script>
   <script src="js/draw.js" type="module"></script>
   <script src="js/animation.js" type="module"></script>
+  <script src="js/tinder.js" type="module"></script>
   <script src="js/fullpage.min.js" type="module"></script>
   <script src="js/app.js" type="module"></script>
 </body>
