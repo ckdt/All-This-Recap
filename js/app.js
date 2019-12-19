@@ -1,6 +1,7 @@
 /* Modules */
 import {CountUp} from './countup.min.js';
 import {AnimateElement} from './animation.js';
+import {TinderCards} from './tinder.js';
 
 /* Fullpage JS */
 new fullpage('#app', {
@@ -185,6 +186,7 @@ function onEnterLocations(){
 }
 function onEnterProjects(){
   console.log('projects');
+  TinderCards();
 }
 function onEnterQuote(){
   console.log('quote');
