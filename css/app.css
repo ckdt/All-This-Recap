@@ -231,7 +231,7 @@ a:active {
 }
 
 .section--header {
-  padding: var(--base-padding) var(--base-padding) 0 var(--base-padding);
+  padding: calc(2*var(--base-padding)) var(--base-padding) 0 var(--base-padding);
 }
 
 .section--header__centered {
@@ -722,6 +722,11 @@ a:active {
   text-transform: uppercase;
 }
 
+small{
+  font-size: 0.5rem;
+  line-height: 1rem;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -798,12 +803,23 @@ p {
 }
 
 @media (min-width: 320px) {
-
+  :root {
+    --base-amount: calc(100vw / 6);
+    --base-size: calc(var(--base-amount) / 5);
+  }
   .headings .XXL,
   .headings .XL,
   .headings .L,
   .headings .M,
   .headings .S {}
+}
+
+.section--header {
+  padding: var(--base-padding) var(--base-padding) 0 var(--base-padding);
+}
+
+.section--projects .section--body {
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -911,7 +927,13 @@ p {
     line-height: 1.75rem;
     font-weight: 600;
   }
+
+  .section--header {
+    padding: calc(2*var(--base-padding)) var(--base-padding) 0 var(--base-padding);
+  }
 }
+
+
 
 /* ANIMATION */
 @keyframes gradientBG {
