@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -85,18 +87,19 @@ body {
   border: 16px #fff solid;
 }
 
-.tinder--card h3{
+.tinder--card h3 {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: 1em;
-  padding:1em 0.25em 0.4em 0.25em;;
+  padding: 1em 0.25em 0.4em 0.25em;
+  ;
 }
 
-.tinder--card h4{
+.tinder--card h4 {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
-  padding:0.4em 1em;
+  padding: 0.4em 1em;
   font-style: normal;
   font-size: 0.8em;
 }
@@ -118,42 +121,47 @@ body {
   font-size: 32px;
   padding:0 0.25em ;
   */
-  pointer-events: none; 
+  pointer-events: none;
 }
+
 .tinder--card h4 {
   /* margin-top: 32px;
   font-size: 32px;
   padding:0 0.25em ;
   */
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .tinder--card p {
   margin-top: 24px;
   font-size: 0.7rem;
   padding: 0 16px;
-  line-height:1.2;
+  line-height: 1.2;
   pointer-events: none;
 }
 
-.tinder--card__black{
-  background:#000000;
+.tinder--card__black {
+  background: #000000;
   color: #fff;
 }
-.tinder--card__red{
-  background:#FF7A00;
+
+.tinder--card__red {
+  background: #FF7A00;
   color: #fff;
 }
-.tinder--card__green{
-  background:#00663B;
+
+.tinder--card__green {
+  background: #00663B;
   color: #fff;
 }
-.tinder--card__yellow{
-  background:#FFC701;
+
+.tinder--card__yellow {
+  background: #FFC701;
   color: #000;
 }
-.tinder--card__blue{
-  background:#000D87;
+
+.tinder--card__blue {
+  background: #000D87;
   color: #fff;
 }
 
@@ -165,7 +173,7 @@ body {
 
 .tinder--buttons button {
   line-height: 60px;
-  height:60px;
+  height: 60px;
   width: 60px;
   border: 0;
   background: #FFFFFF;
@@ -186,7 +194,9 @@ body {
 
 .tinder--buttons i {
   font-size: 32px;
-  vertical-align: middle;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 
 .fa-heart {
@@ -197,11 +207,11 @@ body {
   color: #CDD6DD;
 }
 
-.tinder--endscreen{
+.tinder--endscreen {
   display: inline-block;
   width: 90vw;
   max-width: 400px;
-  max-height: 600px; 
+  max-height: 600px;
   background: #010fff;
   padding: 0.5em;
   border-radius: 32px;
@@ -209,17 +219,17 @@ body {
   position: absolute;
   will-change: transform;
   transition: all 0.3s ease-in-out;
-  border: 16px rgba(0,0,0,0.2) solid;
-  color:#fff;
+  border: 16px rgba(0, 0, 0, 0.2) solid;
+  color: #fff;
 
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
 
 
 
   .tinder--card {
-    
+
     width: 80vw;
     max-width: 400px;
     max-height: 600px;
@@ -230,4 +240,3 @@ body {
   }
 
 }
-
