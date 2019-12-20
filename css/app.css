@@ -356,14 +356,14 @@ a:active {
   animation-iteration-count: infinite;
   display: inline-block;
   width: calc(8 * var(--base-size));
-  border-bottom: 8px dotted var(--color-white); 
+  border-bottom: 8px dotted var(--color-white);
   text-align: center;
 }
 
 .section--summary .counter.filled {
   background: transparent;
   color: var(--color-secondary);
-  border-bottom: 8px solid var(--color-secondary); 
+  border-bottom: 8px solid var(--color-secondary);
 }
 
 /* INDUSTRIES */
@@ -373,24 +373,28 @@ a:active {
   background-size: contain;
   background-position: center center;
 }
-.section--industries .section--title{
+
+.section--industries .section--title {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
-.section--industries .section--title .under{
-  border-bottom: 8px solid var(--color-primary); 
+
+.section--industries .section--title .under {
+  border-bottom: 8px solid var(--color-primary);
 }
+
 .industries--list {
   list-style-type: none;
   counter-reset: li;
   padding-left: 6.5em;
-  margin-top:4rem;
+  margin-top: 4rem;
   font-variant-numeric: tabular-nums;
 
 }
+
 .industries--list li::before {
-  content: '0' counter(li);
+  content: '0'counter(li);
   color: var(--color-primary);
   display: inline-block;
   width: 1.5em;
@@ -401,6 +405,7 @@ a:active {
   font-style: normal;
 
 }
+
 .industries--list li {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
@@ -411,24 +416,26 @@ a:active {
 /* TIME */
 .section--time {
   color: var(--color-white);
-  position:relative;
+  position: relative;
 }
-.section--time  .section--header{
+
+.section--time .section--header {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 2;
 }
-.section--time .section--body{
+
+.section--time .section--body {
   position: absolute;
-  left:0;
+  left: 0;
   bottom: 0;
   width: 100%;
 }
 
-.section--time .section--footer{
+.section--time .section--footer {
   position: absolute;
-  left:0;
+  left: 0;
   bottom: 0;
 }
 
@@ -459,11 +466,11 @@ a:active {
 
 .bar .inner p {
   transform: rotate(-90deg) translateY(100%);
-  transform-origin: left bottom; 
+  transform-origin: left bottom;
   position: absolute;
-  left:50%;
-  margin-left:-16%;
-  bottom:2em;
+  left: 50%;
+  margin-left: -16%;
+  bottom: 2em;
   white-space: nowrap;
   color: var(--color-primary);
   font-family: "InputMonoCompressed", monospace !important;
@@ -502,13 +509,15 @@ a:active {
   background-size: contain;
   background-position: center center;
 }
-.section--locations .section--title{
+
+.section--locations .section--title {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
-.section--locations .section--title .under{
-  border-bottom: 8px solid var(--color-primary); 
+
+.section--locations .section--title .under {
+  border-bottom: 8px solid var(--color-primary);
 }
 
 .section--locations .section--header {
@@ -549,14 +558,13 @@ a:active {
 .section--locations .location {
   padding: var(--base-padding);
   width: 33.3%;
-  text-align:center;
+  text-align: center;
 }
 
-.section--locations .location .location--landmark {
+.section--locations .location .location--landmark {}
 
-}
-.section--locations .location .location--landmark img{
-  width:120px;
+.section--locations .location .location--landmark img {
+  width: 120px;
   margin: 0 auto;
 }
 
@@ -602,6 +610,57 @@ a:active {
   color: var(--color-black);
 }
 
+/* QUOTES */
+.section--quote {
+  color: var(--color-secondary);
+}
+
+.section--quote .section--header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.section--quote .section--title {
+  text-transform: uppercase;
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.section--quote .section--body {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.section--quote .section--footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  color: var(--color-black);
+}
+
+
+.section--quote .section--marquee {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 4;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1.1;
+  padding-top: 4em;
+}
 
 /* CLIENTS */
 .section--clients {
@@ -630,6 +689,25 @@ a:active {
   border-right: 1px solid #333;
 }
 
+/* THANKS */
+.section--thanks {
+  color: var(--color-primary);
+}
+
+.section--thanks .section--body {
+  padding-top: 4em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section--thanks .section--left {
+  width: 75vw;
+}
+
+.section--thanks .section--right {
+  width: 22vw;
+  padding-right: 2em;
+}
 
 
 /* ANIMATION UTILS */
@@ -722,7 +800,7 @@ a:active {
   text-transform: uppercase;
 }
 
-small{
+small {
   font-size: 0.5rem;
   line-height: 1rem;
 }
@@ -807,6 +885,7 @@ p {
     --base-amount: calc(100vw / 6);
     --base-size: calc(var(--base-amount) / 5);
   }
+
   .headings .XXL,
   .headings .XL,
   .headings .L,

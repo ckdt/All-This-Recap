@@ -16,8 +16,7 @@ new fullpage('#app', {
     'projects',
     'quote',
     'clients',
-    'thanks',
-    'outro'
+    'thanks'
   ],
   navigation: true,
   navigationPosition: 'right',
@@ -30,8 +29,7 @@ new fullpage('#app', {
     'projects',
     'quote',
     'clients',
-    'thanks',
-    'outro'
+    'thanks'
   ],
   showActiveTooltip: false,
   slidesNavigation: false,
@@ -81,7 +79,6 @@ new fullpage('#app', {
     '#010fff',
     '#ffffff',
     '#010fff',
-    '#ffffff',
     '#ffffff'
   ],
   paddingTop: '0',
@@ -139,10 +136,10 @@ new fullpage('#app', {
     resetDefaults();
     console.log(origin.index, destination.index, direction);
   },
-  afterLoad: function(origin, destination, direction) {
+  afterLoad: function(origin, destination, direction) {},
+  afterRender: function() {
     onLoadStage();
   },
-  afterRender: function() {},
   afterResize: function(width, height) {},
   afterReBuild: function() {},
   afterResponsive: function(isResponsive) {},
@@ -150,22 +147,21 @@ new fullpage('#app', {
   onSlideLeave: function(section, origin, destination, direction) {}
 });
 
-
 /* Custom onEnterFunctions */
-function onLoadStage(){
+function onLoadStage() {
   console.log('init');
   // resize marque tag
   fitMarquee();
 }
-function onEnterIntro(){
+function onEnterIntro() {
   console.log('intro');
 }
-function onEnterSummary(){
+function onEnterSummary() {
   console.log('summary');
   // start Counter
   startCounter();
 }
-function onEnterIndustries(){
+function onEnterIndustries() {
   console.log('industries');
   // Animate listitems
   const listItems = document.querySelectorAll('.section--industries .js-animate-li');
@@ -173,45 +169,47 @@ function onEnterIndustries(){
     AnimateElement(el, ['fadeInLeft']);
   });
 }
-function onEnterTime(){
+function onEnterTime() {
   console.log('time');
   const graphItems = document.querySelectorAll('.section--time .bar');
   graphItems.forEach(el => {
     AnimateElement(el, ['fadeInUpBig']);
   });
 }
-function onEnterLocations(){
+function onEnterLocations() {
   console.log('locations');
-  AnimateElement('.location--rotterdam',['whobble','infinite']);
+  AnimateElement('.location--rotterdam', ['whobble', 'infinite']);
 }
-function onEnterProjects(){
+function onEnterProjects() {
   console.log('projects');
   TinderCards();
 }
-function onEnterQuote(){
+function onEnterQuote() {
   console.log('quote');
   // Animate quote
-  AnimateElement('.js-animate-quote', ['flash']);
+  //AnimateElement('.js-animate-quote', ['flash']);
 }
-function onEnterClients(){
+function onEnterClients() {
   console.log('clients');
 }
-function onEnterThanks(){
+function onEnterThanks() {
   console.log('thanks');
 }
-function onEnterOutro(){
+function onEnterOutro() {
   console.log('outro');
 }
 
-
 /* Util functions */
 function fitMarquee() {
-  const marquee = document.querySelector('.section--marquee');
-  const single = document.querySelector('.marquee--line__one');
-  marquee.style.width = single.offsetWidth + 'px';
+  const marquee = document.querySelectorAll('.section--marquee');
+  marquee.forEach(el => {
+    el.style.width = el.firstElementChild.offsetWidth + 'px';
+
+    console.log(el.style.width, el.firstElementChild.offsetWidth, 'px');
+  });
 }
 
-function startCounter(){
+function startCounter() {
   var countID = setInterval(
     function(e) {
       const counter = document.querySelector('.js-animate-counter');
@@ -233,13 +231,13 @@ function startCounter(){
   );
 }
 
-function resetCounter(){
+function resetCounter() {
   const counter = document.querySelector('.js-animate-counter');
   counter.innerHTML = '0';
   counter.classList.remove('filled', 'bounce', 'animated');
 }
 
-function onCounterEnd(){
+function onCounterEnd() {
   AnimateElement('.js-animate-counter', ['bounce', 'filled']);
 }
 
