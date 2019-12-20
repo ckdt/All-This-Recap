@@ -669,25 +669,33 @@ a:active {
 
 .section--clients .grid--logos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: -1px;
   grid-auto-rows: minmax(100px, auto);
-  border-bottom: 1px solid #333;
-  width: 80vw;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  width: 70vw;
+  margin-top:-10vh;
 }
 
 .section--clients .grid--col {
-  border-top: 1px solid #333;
-  border-left: 1px solid #333;
+  border-top: 1px dotted rgba(255, 255, 255, 0.5);
+  border-left: 1px dotted rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 100px;
+  padding:20px
 }
 
-.section--clients .grid--col:nth-child(3n+0) {
-  border-right: 1px solid #333;
+.section--clients .grid--col:nth-child(2n+0) {
+  border-right: 1px dotted rgba(255, 255, 255, 0.5);
 }
+
+.section--clients .grid--col img {
+  max-height:80%;
+}
+
+
 
 /* THANKS */
 .section--thanks {
@@ -707,7 +715,16 @@ a:active {
 .section--thanks .section--right {
   width: 22vw;
   padding-right: 2em;
+  
+  
 }
+
+.section--thanks .section--right p {
+  text-align:right;
+  line-height:1rem;
+  
+}
+
 
 
 /* ANIMATION UTILS */
@@ -800,10 +817,7 @@ a:active {
   text-transform: uppercase;
 }
 
-small {
-  font-size: 0.5rem;
-  line-height: 1rem;
-}
+
 
 p {
   font-size: 1rem;
@@ -880,6 +894,16 @@ p {
   border: 1px solid #999;
 }
 
+
+.section--header {
+  padding: var(--base-padding) var(--base-padding) 0 var(--base-padding);
+}
+
+.section--projects .section--body {
+  padding: 0;
+}
+
+
 @media (min-width: 320px) {
   :root {
     --base-amount: calc(100vw / 6);
@@ -893,13 +917,35 @@ p {
   .headings .S {}
 }
 
-.section--header {
-  padding: var(--base-padding) var(--base-padding) 0 var(--base-padding);
+@media (min-width: 480px) {
+
+  .section--clients .grid--logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -1px;
+    grid-auto-rows: minmax(200px, auto);
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    width: 80vw;
+    margin-top:-10vh;
+  }
+  
+  .section--clients .grid--col {
+  
+    height: 200px;
+    padding:0;
+  }
+  
+  .section--clients .grid--col img {
+  
+    max-width: 100%;
+  }
+
+
+.section--clients .grid--col:nth-child(3n+0) {
+  border-right: 1px dotted rgba(255, 255, 255, 0.5);
 }
 
-.section--projects .section--body {
-  padding: 0;
-}
+  }
 
 @media (min-width: 768px) {
   :root {
@@ -1011,8 +1057,6 @@ p {
     padding: calc(2*var(--base-padding)) var(--base-padding) 0 var(--base-padding);
   }
 }
-
-
 
 /* ANIMATION */
 @keyframes gradientBG {

@@ -70,13 +70,13 @@ body {
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
+  width: 80vw;
   max-width: 400px;
   max-height: 600px;
-  height: 70vh;
+  height: 60vh;
   background: #FFFFFF;
   padding-bottom: 40px;
-  border-radius: 32px;
+  border-radius: 16px;
   overflow: hidden;
   position: absolute;
   will-change: transform;
@@ -84,25 +84,81 @@ body {
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
-  border: 16px #fff solid;
+  border: 8px #fff solid;
 }
 
-.tinder--card h3 {
+
+.tinder--endscreen {
+  display: inline-block;
+  width: 75vw;
+  max-width: 320px;
+  max-height: 540px;
+  height: 55vh;
+  background: #010fff;
+  padding: 0.5em;
+  border-radius: 16px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  border: 8px rgba(255, 255, 255, 0.2) dashed;
+  color: #fff;
+  /* vertical align van de content werkt niet */
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+
+}
+
+.tinder--card h3, .tinder--endscreen h3 {
+  padding: 1.25rem 0.25rem 0 0.25rem;
   font-family: "Cooper Hewitt", sans-serif;
+  font-size: 1rem;
   font-weight: 800;
   font-style: normal;
-  font-size: 1em;
-  padding: 1em 0.25em 0.4em 0.25em;
+  pointer-events: none;
+  
+  
   ;
 }
 
-.tinder--card h4 {
-  font-family: "Cooper Hewitt", sans-serif;
-  font-weight: 800;
-  padding: 0.4em 1em;
+.tinder--card h4, .tinder--endscreen h4 {
+  padding: 0.45rem 1rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.8em;
+  pointer-events: none;
+ 
+ 
 }
+
+.tinder--card p, .tinder--endscreen p {
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.tinder--card small {
+  font-size: 0.5rem;
+  line-height: 1rem;
+  position: absolute;
+  bottom:32px;
+  width:100%;
+  left:50%;
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.tinder--endscreen p a {
+  pointer-events: all;
+}
+
 
 .moving.tinder--card {
   transition: none;
@@ -145,7 +201,7 @@ body {
   color: #fff;
 }
 
-.tinder--card__red {
+.tinder--card__orange {
   background: #FF7A00;
   color: #fff;
 }
@@ -207,24 +263,9 @@ body {
   color: #CDD6DD;
 }
 
-.tinder--endscreen {
-  display: inline-block;
-  width: 90vw;
-  max-width: 400px;
-  max-height: 600px;
-  background: #010fff;
-  padding: 0.5em;
-  border-radius: 32px;
-  overflow: hidden;
-  position: absolute;
-  will-change: transform;
-  transition: all 0.3s ease-in-out;
-  border: 16px rgba(0, 0, 0, 0.2) solid;
-  color: #fff;
 
-}
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
 
 
 
@@ -235,8 +276,23 @@ body {
     max-height: 600px;
     height: 80vh;
     padding-bottom: 40px;
-    border-radius: 16px;
-    border: 8px #fff solid;
+    border-radius: 32px;
+    border: 16px #fff solid;
   }
 
+  .tinder--endscreen {
+    display: inline-block;
+    width: 75vw;
+    max-width: 320px;
+    max-height: 540px;
+    height: 60vh;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .tinder--card p{
+    font-size: 0.65em;
+  }
+    
 }
