@@ -132,12 +132,12 @@ canvas.addEventListener('touchstart', function(e) {
   e.preventDefault();
   clientX = Math.floor(e.touches[0].clientX);
   clientY = Math.floor(e.touches[0].clientY);
-  console.log('click', clientX, clientY);
 });
 
 canvas.addEventListener('touchend', function(e) {
   e.preventDefault();
   placeImage(clientX, clientY);
+  console.log('click', clientX, clientY);
 });
 
 const resetButton = document.querySelector('.section--locations .js-reset');
