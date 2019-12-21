@@ -14,48 +14,58 @@
   <link rel="stylesheet" href="css/fullpage.min.css" />
   <link rel="stylesheet" href="css/animate.min.css" />
   <link rel="stylesheet" href="css/tinder.css" />
-  <link rel="stylesheet" href="css/app.css" />
+  <!-- <link rel="stylesheet" href="css/app.css" /> -->
+  <link rel="stylesheet" href="css/app.mobilefirst.css" />
 </head>
 
 <body>
   <div id="app" class="app">
     <!-- intro -->
     <div class="section section--intro">
-      <header class="section--header section--header__centered">
-        <h3 class="section--title text--cylce__sentence">2019 was
+      <header class="section--header section--header__abs section--header__centered ">
+        <h3 class="section--title text--cylce__sentence">2019 was a very
           <div class="text--cylce__words text--cylce__vertical">
-            <span>a very good year.</span>
-            <span>amazing.</span>
-            <span>beautiful.</span>
-            <span>delightful.</span>
-            <span>emotional.</span>
+            <span>good year.</span>
+            <span>amazing year.</span>
+            <span>beautiful year.</span>
+            <span>delightful year.</span>
+            <span>emotional year.</span>
           </div>
         </h3>
       </header>
-      <section class="section--body section--body__fc">
-        <div class="section--marquee ">
-          <div class="marquee--line marquee--line__one INSANE">
-            ALL THIS &mdash; Year in review 2019 &mdash;
-          </div>
-          <div class="marquee--line marquee--line__two INSANE">
-            ALL THIS &mdash; Year in review 2019 &mdash;
+      <section class="section--body section--body__abs ">
+        <div class=" section--body__fc">
+          <div class="section--marquee ">
+            <div class="marquee--line marquee--line__one INSANE">
+              ALL THIS &mdash; Year in review 2019 &mdash;
+            </div>
+            <div class="marquee--line marquee--line__two INSANE">
+              ALL THIS &mdash; Year in review 2019 &mdash;
+            </div>
           </div>
         </div>
         <canvas id="drawingboard" class="js-drawcanvas"></canvas>
       </section>
-      <footer class="section--footer section--footer__centered">
-        <p class="mono uppercase">click, scroll or use <span class="numpad">&downarrow;</span> <span
-            class="numpad">&uparrow;</span> <a href="#" class="dotlink js-reset">Clear canvas</a></p>
+      <footer class="section--footer section--footer__abs section--footer__centered">
+        <p class="mono uppercase">Scroll or use keyboard</p>
+        <p class="mono uppercase"> 
+          <span class="numpad">&downarrow;</span>
+          <span class="numpad">&uparrow;</span> 
+        </p>
+        <p><a href="#" class="dotlink js-reset">Clear canvas</a></p>
     </div>
     <!-- summary -->
     <div class="section section--summary">
-      <section class="section--body section--body__fc">
-        <div>
-          <h2 class="body--title XXL js-animate">
-            In 2019 we worked<br>
-            on <span class="counter js-animate-counter">0</span> projects.
-          </h2>
-          <p>Got a project? <a href="https://allthis.digital/contact" class="dotlink contact">Let us know.</a></p>
+      <section class="section--body">
+        <div class="section--body__fc section--body__jc">
+          <div class="body--content">
+            <h2 class="body--title XXL js-animate">
+              In 2019 we worked<br>
+              on <span class="counter js-animate-counter">0</span> projects.
+            </h2>
+            <p class="body--copy">Got a project? <a href="https://allthis.digital/contact" class="dotlink contact">Let
+                us know.</a></p>
+          </div>
         </div>
       </section>
     </div>
@@ -67,11 +77,11 @@
       <section class="section--body">
         <div class="industries">
           <ol class="industries--list">
-            <li class="industries--list--item js-animate-li ani-d4 L">FinTech</li>
-            <li class="industries--list--item js-animate-li ani-d3 L">LegalTech</li>
+            <li class="industries--list--item js-animate-li  L">FinTech</li>
+            <li class="industries--list--item js-animate-li ani-d1 L">LegalTech</li>
             <li class="industries--list--item js-animate-li ani-d2 L">Insurance</li>
-            <li class="industries--list--item js-animate-li ani-d1 L">Retail</li>
-            <li class="industries--list--item js-animate-li L">B-Corp</li>
+            <li class="industries--list--item js-animate-li ani-d3 L">Retail</li>
+            <li class="industries--list--item js-animate-li ani-d4 L">B-Corp</li>
           </ol>
         </div>
       </section>
@@ -82,10 +92,10 @@
 
     <!-- time -->
     <div class="section section--time">
-      <header class="section--header">
+      <header class="section--header section--header__abs">
         <h2 class="section--title XXL">Time spent</h2>
       </header>
-      <section class="section--body">
+      <section class="section--body  section--body__abs ">
         <div class="graph">
           <div class="bar bar--one">
             <div class="inner">
@@ -114,19 +124,19 @@
           </div>
         </div>
       </section>
-      <footer class="section--footer section--footer__bar">
+      <footer class="section--footer section--footer__abs section--footer__bar">
         <p></p>
       </footer>
     </div>
 
     <!-- locations -->
     <div class="section section--locations">
-      <header class="section--header">
+      <header class="section--header section--header__abs">
         <h2 class="section--title section--title__pd XXL">Top <span class="under">three</span> locations</h2>
         <p>Click to show 📷 pictures </p>
       </header>
       <div class="js-drawcanvas"></div>
-      <section class="section--body">
+      <section class="section--body section--body__abs">
         <div class="location--index">
           <div class=" location location--amsterdam">
             <div class="location--landmark">
@@ -155,9 +165,9 @@
     <!-- projects -->
     <div class="section section--projects">
       <header class="section--header">
-        <h2 class="section--title S">Selected projects</h2>
+        <h2 class="section--title S">Project Tinder</h2>
       </header>
-      <section class="section--body">
+      <section class="section--body section--body__abs">
 
         <div class="tinder">
           <div class="tinder--status">
@@ -209,17 +219,21 @@
 
             <div class="tinder--endscreen">
               <div>
-              <h3>Your project here?</h3>
-              <h4>We are open for business in 2020</h4>
-              <p><a href="mailto:hello@allthis.digital">Contact us</a></p>
-            </div>
+                <h3>Your project here?</h3>
+                <h4>We are open for business in 2020</h4>
+                <p><a href="mailto:hello@allthis.digital">Contact us</a></p>
+              </div>
             </div>
           </div>
 
           <div class="tinder--buttons">
             <button id="nope">
               <i class="fa fa-remove">
-                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg>
+                <svg viewBox="0 0 353 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M243.164 176L343.234 75.93C355.514 63.65 355.514 43.74 343.234 31.45L320.994 9.21C308.714 -3.07 288.804 -3.07 276.514 9.21L176.444 109.28L76.3743 9.21C64.0943 -3.07 44.1843 -3.07 31.8943 9.21L9.65434 31.45C-2.62566 43.73 -2.62566 63.64 9.65434 75.93L109.724 176L9.65434 276.07C-2.62566 288.35 -2.62566 308.26 9.65434 320.55L31.8943 342.79C44.1743 355.07 64.0943 355.07 76.3743 342.79L176.444 242.72L276.514 342.79C288.794 355.07 308.714 355.07 320.994 342.79L343.234 320.55C355.514 308.27 355.514 288.36 343.234 276.07L243.164 176Z" fill="#fff"/>
+                  </svg>
+                </path>
+                </svg>
               </i>
             </button>
             <button id="love">
@@ -288,10 +302,10 @@
       </header>
       <section class="section--body">
         <div class="section--left">
-        <p class="mono S">Hire us for your next Digital Project! Earlybirds discount of 5%.</p>
-        <p>Feel free to say Hi! Ok bye!</p>
-        <p>hello@allthis.digital</p>
-      </div>
+          <p class="mono S">Hire us for your next Digital Project! Earlybirds discount of 5%.</p>
+          <p>Feel free to say Hi! Ok bye!</p>
+          <p>hello@allthis.digital</p>
+        </div>
         <div class="section--right">
           <p><strong>We’d like to thank:</strong><br>
             Our Mom and Dad<br>
