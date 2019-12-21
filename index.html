@@ -20,6 +20,14 @@
 
 <body>
   <div id="app" class="app">
+
+    <div class="allthis"><a href="https://allthis.digital" title="All This"><svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M140 0H0V40H140V0Z" fill="#010fff"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M122.187 24.0364H115.297C114.745 29.0546 117.821 31.7819 123.532 31.7819C128.874 31.7819 132.613 29.1455 133.147 24.7273C133.497 21.7455 132.337 19.7091 129.261 18.3091L125.484 16.6546C123.937 15.9273 123.182 15.3819 123.329 14.2728C123.439 13.2546 124.195 12.6182 125.318 12.6182C126.589 12.6182 127.234 13.4546 127.087 15.1637H133.774C134.289 10.6182 131.545 8.14551 126.055 8.14551C120.676 8.14551 117.066 10.7091 116.605 14.7819C116.218 18.0001 117.784 20.0546 121.247 21.491L124.397 22.8001C125.853 23.4364 126.461 24.0728 126.35 25.1819C126.221 26.2728 125.392 26.9637 124.232 26.9637C122.758 26.9637 121.966 25.9455 122.187 24.0364ZM20.5763 28.1637H14.35L13.2816 31.091H6.06055L15.7316 8.85459H23.6895L28.1474 31.091H20.9263L20.5763 28.1637ZM20.0421 23.6182L18.9737 14.9819L15.8974 23.6182H20.0421ZM32.3843 8.85459H39.4579L37.4685 25.6H43.5106L42.8658 31.091H29.75L32.3843 8.85459ZM55.0237 8.85459H47.95L45.3343 31.091H58.45L59.0948 25.6H53.0527L55.0237 8.85459ZM72.4684 14.3455H67.9L68.5632 8.85459H84.7737L84.1105 14.3455H79.5421L77.5895 31.091H70.5158L72.4684 14.3455ZM93.4317 8.85459H86.358L83.7422 31.091H90.8159L91.829 22.7091H96.5264L95.5317 31.091H102.605L105.203 8.85459H98.129L97.0975 17.4H92.4001L93.4317 8.85459ZM108.224 8.85459H115.297L112.682 31.091H105.608L108.224 8.85459Z" fill="#ffffff"></path>
+      </svg>
+      </a>
+    </div>
+
     <!-- intro -->
     <div class="section section--intro">
       <header class="section--header section--header__abs section--header__centered ">
@@ -49,8 +57,8 @@
       <footer class="section--footer section--footer__abs section--footer__centered">
         <p class="mono uppercase">Scroll or use keyboard</p>
         <p class="mono uppercase"> 
-          <span class="numpad">&downarrow;</span>
-          <span class="numpad">&uparrow;</span> 
+          <span class="numpad js-down">&downarrow;</span>
+          <span class="numpad js-up">&uparrow;</span> 
         </p>
         <p><a href="#" class="dotlink js-reset">Clear canvas</a></p>
     </div>
@@ -63,7 +71,7 @@
               In 2019 we worked<br>
               on <span class="counter js-animate-counter">0</span> projects.
             </h2>
-            <p class="body--copy">Got a project? <a href="https://allthis.digital/contact" class="dotlink contact">Let
+            <p class="body--copy">Got a project? <a href="mailto:hello@allthis.digital" class="dotlink contact">Let
                 us know.</a></p>
           </div>
         </div>
@@ -133,7 +141,7 @@
     <div class="section section--locations">
       <header class="section--header section--header__abs">
         <h2 class="section--title section--title__pd XXL">Top <span class="under">three</span> locations</h2>
-        <p>Click to show 📷 pictures </p>
+        <p class="mono uppercase">Click to show 📷 pictures </p>
       </header>
       <div class="js-drawcanvas"></div>
       <section class="section--body section--body__abs">
@@ -165,7 +173,7 @@
     <!-- projects -->
     <div class="section section--projects">
       <header class="section--header">
-        <h2 class="section--title S">Project Tinder</h2>
+        <h2 class="section--title S">Project tinder</h2>
       </header>
       <section class="section--body section--body__abs">
 
@@ -257,30 +265,33 @@
     </div>
     <!-- quote -->
     <div class="section section--quote">
-      <header class="section--header">
-        <h2 class="section--title">Favorite client quote: "You are both fantastic" </h2>
+      <header class="section--header section--header__abs section--header__centered">
+        <h2 class="section--title mono uppercase">Fernando Padín Amestoy</h2>
       </header>
       <section class="section--body section--body__fc">
-        <div class="section--marquee">
+        <div class="quote">
+          <a>You are both <br> fantastic</a>
+        </div>
+<!--    <div class="section--marquee">
           <div class="marquee--line marquee--line__one INSANE">
             You are both fantastic
           </div>
           <div class="marquee--line marquee--line__two INSANE">
             You are both fantastic
           </div>
-        </div>
+        </div> -->
       </section>
-      <footer class="section--footer">
-        <p>&mdash; Fernando Padín Amestoy &bullet; Product Owner Justix</p>
+      <footer class="section--footer section--footer__abs">
+        <p class="mono uppercase">&mdash; Product Owner Justix</p>
       </footer>
     </div>
 
     <!-- clients -->
     <div class="section section--clients">
       <header class="section--header">
-        <h2 class="section--title S">New clients</h2>
+        <h2 class="section--title S"><span class="under">New</span> clients</h2>
       </header>
-      <section class="section--body section--body__fc">
+      <section class="section--body section--body__fc section--body__jc">
         <div class="grid--logos">
           <div class="grid--col grid--col__one"><img src="img/logos/abn.svg" width="200"></div>
           <div class="grid--col grid--col__two"><img src="img/logos/basicfit.svg" width="120"></div>
@@ -291,30 +302,30 @@
         </div>
       </section>
       <footer class="section--footer">
-        <p>footer</p>
+        <!-- <p>footer</p> -->
       </footer>
     </div>
     <!-- thanks -->
     <div class="section section--thanks">
       <header class="section--header">
         <h2 class="section--title XL">Work with us</h2>
-        <p>Another Year, New possibilities</p>
       </header>
       <section class="section--body">
         <div class="section--left">
-          <p class="mono S">Hire us for your next Digital Project! Earlybirds discount of 5%.</p>
-          <p>Feel free to say Hi! Ok bye!</p>
-          <p>hello@allthis.digital</p>
+          <p class="lead">Another Year, new possibilities. Hire us for your next Digital Project! </p>
+          <p><a href="mailto:hello@allthis.digital" class="dotlink">hello@allthis.digital</a></p>
+          <div class="saturn">Earlybirds discount of 10% on 100 hrs+</div>
         </div>
         <div class="section--right">
-          <p><strong>We’d like to thank:</strong><br>
-            Our Mom and Dad<br>
-            Our Loved ones<br>
-            Our Clients<br>
-            Het Industriegebouw<br>
-            By Jarmusch<br>
-            Neo accountants<br>
-            The Bank</p>
+          <p><strong>We’d like to thank:</strong>
+            <ul>
+              <li>Our Clients</li>
+              <li>Our Loved ones</li>
+              <li>Mom and Dad</li>
+              <li>By Jarmusch</li>
+              <li>Neo accountants</li>
+              <li>The bank</li>
+            </ul>
         </div>
       </section>
       <footer class="section--footer">

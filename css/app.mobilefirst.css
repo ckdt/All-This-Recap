@@ -204,6 +204,13 @@ body {
   line-height: var(--base-line);
 }
 
+.allthis {
+  position: fixed;
+  top: var(--base-padding);
+  right: var(--base-padding);
+  opacity: 0;
+}
+
 a:link {
   color: var(--color-white);
   text-decoration: none;
@@ -282,6 +289,10 @@ a:active {
   align-items: center;
   justify-content: center;
 } */
+
+.section--header__centered {
+  text-align: center;
+}
 
 .section--footer p {
   padding-bottom: var(--base-padding);
@@ -520,7 +531,7 @@ a:active {
 
 /* TIME */
 .section--time {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .section--time .section--title {
@@ -603,12 +614,23 @@ a:active {
   background-position: center center;
 }
 
+.section--locations .section--header {
+  z-index: 10 !important;
+}
+
+.section--locations .section--header p {
+  font-size: 1.375rem;
+  color: var(--color-black);
+}
+
+
 .section--locations .section--title {
   font-family: "Cooper Hewitt", sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: 3.8rem;
   line-height: 1.2;
+  padding-bottom: var(--base-padding);
 }
 
 .section--locations .js-drawcanvas {
@@ -619,7 +641,6 @@ a:active {
   width: 100%;
   height: 100%;
   z-index: 8;
-  background: red;
 }
 
 .section--locations .js-img {
@@ -635,25 +656,178 @@ a:active {
   z-index: 8;
 }
 
+.section--locations .location--index {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.section--locations .location {
+  margin-bottom: var(--base-padding);
+}
+
+.section--locations .location .location--landmark img {
+  width: 120px;
+  margin: 0 auto calc(var(--base-padding) /2) auto;
+}
+
+.section--locations .location .location--name {
+  text-align: center;
+  font-weight: 300;
+  color: var(--color-primary);
+  font-family: "InputMonoCompressed", monospace !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+
 /* PROJECTS */
 .section--projects {
   color: var(--color-white);
 }
 
+.section--projects .section--title {
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: var(--base-padding);
+}
+
 /* QUOTE */
 .section--quote {
-  color: var(--color-secondary);
+  color: var(--color-primary);
+  background: url('../img/background/quote.svg') no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
+
+.quote {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.quote a {
+  text-decoration: none;
+  -webkit-transform: perspective(2.5em) rotateX(6deg) scaleY(0.8);
+  -moz-transform: perspective(2.5em) rotateX(6deg) scaleY(0.8);
+  -ms-transform: perspective(2.5em) rotateX(6deg) scaleY(0.8);
+  -o-transform: perspective(2.5em) rotateX(6deg) scaleY(0.8);
+  transform: perspective(2.5em) rotateX(6deg) scaleY(0.8);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 1.05;
+  color: var(--color-primary);
+  text-shadow: 0 1px 0 #fff, 0 3px 0 #fff, 0 5px 0 #FFC701, 0 7px 0 #FFC701, 0 9px 0 #FFC701, 0 6px 50px rgba(255, 199, 1, 0.8);
+}
+
+.quote a:first-line {
+  font-size: 0.8em;
+}
+
+.quote a:hover {
+  -webkit-transform: perspective(8em) rotateX(11deg) scale(1.2);
+  -moz-transform: perspective(8em) rotateX(11deg) scale(1.2);
+  -ms-transform: perspective(8em) rotateX(11deg) scale(1.2);
+  -o-transform: perspective(8em) rotateX(11deg) scale(1.2);
+  transform: perspective(8em) rotateX(11deg) scale(1.2);
+  text-shadow: 0 1px 0 #fff, 0 2px 0 #fff, 0 0px 0 #FFC701, 0 1px 0 #FFC701, 0 2px 0 #FFC701, 0 2px 30px rgba(255, 199, 1, 0.8);
+}
+
 
 /* CLIENTS */
 .section--clients {
   color: var(--color-white);
 }
 
+.section--clients .section--title {
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3.8rem;
+  line-height: 1.2;
+  padding-bottom: var(--base-padding);
+}
+
+.section--clients .section--title .under {
+  border-color: var(--color-white);
+}
+
+.section--clients .section--body {
+  height: auto !important;
+}
+
+.section--clients .grid--logos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: -1px;
+  grid-auto-rows: minmax(100px, auto);
+  border: 1px dotted rgba(255, 255, 255, 0.5);
+  width: 85vw;
+}
+
+.section--clients .grid--col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 20px
+}
+
+.section--clients .grid--col:nth-child(2n+0) {}
+
+.section--clients .grid--col img {
+  max-height: 80%;
+}
+
 /* THANKS */
 .section--thanks {
   color: var(--color-primary);
 }
+
+.section--thanks a {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: bold;
+}
+
+.section--thanks .section--title {
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: var(--base-padding);
+}
+
+.section--thanks .section--body {
+  position: relative;
+}
+
+.lead {
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+.section--thanks .section--body p {
+  padding-bottom: 1em;
+}
+
+
 
 
 /* ANIMATIONS */
@@ -810,4 +984,109 @@ a:active {
   to {
     transform: translateX(-100%);
   }
+}
+
+.saturn {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  margin-left: -65px;
+  margin-top: -65px;
+  background: var(--color-secondary);
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: baseline;
+  padding-top: 1.75em;
+  -webkit-animation: myOrbit 4s linear infinite;
+  /* Chrome, Safari 5 */
+  -moz-animation: myOrbit 4s linear infinite;
+  /* Firefox 5-15 */
+  -o-animation: myOrbit 4s linear infinite;
+  /* Opera 12+ */
+  animation: myOrbit 4s linear infinite;
+}
+
+@-webkit-keyframes myOrbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@-moz-keyframes myOrbit {
+  from {
+    -moz-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@-o-keyframes myOrbit {
+  from {
+    -o-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -o-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes myOrbit {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+
+
+/* MEDIAQUERIES */
+@media (min-width: 768px) {
+
+  .allthis {
+
+    opacity: 1;
+
+  }
+
+  .section--intro .section--footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: space-around;
+    font-size: 1rem;
+  }
+
+  .section--clients .grid--logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -1px;
+    grid-auto-rows: minmax(100px, auto);
+    border: 1px dotted rgba(255, 255, 255, 0.5);
+    width: 85vw;
+  }
+
+  .section--locations .location--index {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .quote a {
+    font-size: 5rem;
+  }
+
+  .section--clients .section--body {
+    height: 80vh !important;
+  }
+
 }

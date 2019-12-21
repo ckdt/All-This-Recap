@@ -77,13 +77,13 @@ new fullpage('#app', {
     '#fff010',
     '#ffffff',
     '#010fff',
-    '#ffffff',
+    '#fff010',
     '#010fff',
     '#ffffff'
   ],
   paddingTop: '0',
   paddingBottom: '0',
-  fixedElements: '',
+  fixedElements: '.allthis',
   responsiveWidth: 0,
   responsiveHeight: 0,
   responsiveSlides: false,
@@ -152,14 +152,18 @@ function onLoadStage() {
   console.log('init');
   // resize marque tag
   fitMarquee();
+  activateControls();
 }
 function onEnterIntro() {
   console.log('intro');
 }
 function onEnterSummary() {
   console.log('summary');
+
+  const txt = document.querySelector('.section--summary .js-animate');
+  AnimateElement(txt, ['fadeInUpBig'], startCounter());
   // start Counter
-  startCounter();
+  // startCounter();
 }
 function onEnterIndustries() {
   console.log('industries');
@@ -199,6 +203,13 @@ function onEnterOutro() {
   console.log('outro');
 }
 
+function activateControls() {
+  const down = document.querySelector('.js-down');
+  const up = document.querySelector('.js-up');
+  down.addEventListener('click', function() {
+    fullpage_api.moveTo('summary', 1);
+  });
+}
 /* Util functions */
 function fitMarquee() {
   const marquee = document.querySelectorAll('.section--marquee');
