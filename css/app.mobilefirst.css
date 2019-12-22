@@ -1097,8 +1097,8 @@ a:active {
     width: 85vw;
   }
 
-  .section--clients .grid--logo {
-    height: 200px;
+  .section--clients .grid--col {
+    height: auto !important;
   }
 
   .section--locations .location--index {
