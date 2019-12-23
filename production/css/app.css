@@ -4988,7 +4988,6 @@ a:active {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: -1px;
   grid-auto-rows: minmax(64px, auto);
-  border: 1px dotted rgba(255, 255, 255, .5);
   width: 85vw
 }
 
@@ -5008,7 +5007,9 @@ a:active {
   -ms-flex-pack: center;
   justify-content: center;
   height: 64px;
-  padding: 10px
+  padding: 10px;
+
+  border: 1px dotted rgba(255, 255, 255, .5);
 }
 
 .section--clients .grid--col img {
@@ -5039,12 +5040,16 @@ a:active {
 }
 
 .lead {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
+  font-weight: 800;
   line-height: 1.4
 }
-
+.section--left{
+  max-width:480px;
+}
 .section--thanks .section--body p {
-  padding-bottom: 1em
+  padding-top: 0.25em;
+  padding-bottom: 0.75em;
 }
 
 .ani-d1 {
