@@ -4745,7 +4745,16 @@ a:active {
   background: linear-gradient(220deg, transparent 20px, var(--color-primary) 0) top right;
   background-repeat: no-repeat;
   width: 18%;
-  padding-right: 2em
+  padding-right: 2em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  transform-origin: bottom center;
+}
+
+.bar:hover{
+  transform: scale(1.2) translateY(0) translateX(0);
+ 
 }
 
 .bar .inner {
@@ -4887,7 +4896,8 @@ a:active {
 }
 
 .section--locations .section--footer a {
-  color: var(--color-primary)
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .section--projects {
@@ -5239,6 +5249,18 @@ a:active {
     justify-items: space-around;
     font-size: 1rem
   }
+
+  .section--summary .body--title {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+
+
+  .industries--list li{
+    font-size: 3.25rem !important;
+    line-height: 1.2;
+  }
+
 
   .section--clients .grid--logos {
     display: -ms-grid;
