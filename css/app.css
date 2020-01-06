@@ -333,6 +333,12 @@ a:active {
   border-radius: 4px;
   padding: 0.5em 1em;
   border: 2px solid rgba(255, 255, 255, 0.25);
+
+}
+
+.section--intro .numpad,
+.section--intro .numpad:hover {
+  cursor: hand !important;
 }
 
 /* SUMMARY */
@@ -674,7 +680,7 @@ a:active {
   grid-auto-rows: minmax(100px, auto);
   border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
   width: 70vw;
-  margin-top:-10vh;
+  margin-top: -10vh;
 }
 
 .section--clients .grid--col {
@@ -684,7 +690,7 @@ a:active {
   align-items: center;
   justify-content: center;
   height: 100px;
-  padding:20px
+  padding: 20px
 }
 
 .section--clients .grid--col:nth-child(2n+0) {
@@ -692,7 +698,7 @@ a:active {
 }
 
 .section--clients .grid--col img {
-  max-height:80%;
+  max-height: 80%;
 }
 
 
@@ -715,14 +721,14 @@ a:active {
 .section--thanks .section--right {
   width: 22vw;
   padding-right: 2em;
-  
-  
+
+
 }
 
 .section--thanks .section--right p {
-  text-align:right;
-  line-height:1rem;
-  
+  text-align: right;
+  line-height: 1rem;
+
 }
 
 
@@ -926,26 +932,26 @@ p {
     grid-auto-rows: minmax(200px, auto);
     border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
     width: 80vw;
-    margin-top:-10vh;
+    margin-top: -10vh;
   }
-  
+
   .section--clients .grid--col {
-  
+
     height: 200px;
-    padding:0;
+    padding: 0;
   }
-  
+
   .section--clients .grid--col img {
-  
+
     max-width: 100%;
   }
 
 
-.section--clients .grid--col:nth-child(3n+0) {
-  border-right: 1px dotted rgba(255, 255, 255, 0.5);
-}
-
+  .section--clients .grid--col:nth-child(3n+0) {
+    border-right: 1px dotted rgba(255, 255, 255, 0.5);
   }
+
+}
 
 @media (min-width: 768px) {
   :root {
